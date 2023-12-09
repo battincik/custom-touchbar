@@ -1,0 +1,88 @@
+{
+    "name": "custom-touchbar",
+    "version": "1.0.1",
+    "description": "A VS Code extension to customize the Touch Bar",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/battincik/custom-touchbar.git"
+    },
+    "author": "Battincik",
+    "publisher": "Battincik",
+    "icon": "images/icon.png",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/battincik/custom-touchbar/issues"
+    },
+    "homepage": "https://github.com/battincik/custom-touchbar#readme",
+    "activationEvents": [
+        "onCommand:extension.newUntitledFile",
+        "onCommand:extension.toggleTerminal"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.newUntitledFile",
+                "title": "New File",
+                "category": "Touch Bar"
+            },
+            {
+                "command": "extension.toggleTerminal",
+                "title": "Toggle Terminal",
+                "category": "Touch Bar"
+            }
+        ],
+        "menus": {
+            "touchBar": [
+                {
+                    "command": "extension.newUntitledFile",
+                    "group": "navigation",
+                    "icon": {
+                        "light": "resources/light/new-file.svg",
+                        "dark": "resources/dark/new-file.svg"
+                    }
+                },
+                {
+                    "command": "extension.toggleTerminal",
+                    "group": "navigation",
+                    "icon": {
+                        "light": "resources/light/terminal.svg",
+                        "dark": "resources/dark/terminal.svg"
+                    }
+                }
+            ]
+        },
+        "configuration": {
+            "type": "object",
+            "title": "Custom Touch Bar",
+            "properties": {
+                "customTouchbar.commands": {
+                    "type": "array",
+                    "default": [
+                        {
+                            "command": "extension.newUntitledFile",
+                            "title": "New File",
+                            "action": "workbench.action.files.newUntitledFile"
+                        },
+                        {
+                            "command": "extension.toggleTerminal",
+                            "title": "Toggle Terminal",
+                            "action": "workbench.action.terminal.toggleTerminal"
+                        }
+                    ],
+                    "description": "Configure the custom commands for the Touch Bar."
+                }
+            }
+        }
+    },
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.3.3",
+        "vscode": "^1.1.37"
+    }
+}
