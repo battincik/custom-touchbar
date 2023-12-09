@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2023-12-09
+
+### Added
+
+- New application icon introduced, offering a refreshed look and improved brand alignment.
+
 ## [1.0.1] - 2023-12-09
 
 ### Added

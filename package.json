@@ -1,6 +1,6 @@
 {
     "name": "custom-touchbar",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A VS Code extension to customize the Touch Bar",
     "main": "index.js",
     "scripts": {
